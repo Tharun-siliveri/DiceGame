@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Tharun-siliveri/DiceGame/static/css/main.10088fa4.css",
-    "main.js": "/Tharun-siliveri/DiceGame/static/js/main.f371ac76.js",
-    "index.html": "/Tharun-siliveri/DiceGame/index.html",
-    "main.10088fa4.css.map": "/Tharun-siliveri/DiceGame/static/css/main.10088fa4.css.map",
-    "main.f371ac76.js.map": "/Tharun-siliveri/DiceGame/static/js/main.f371ac76.js.map"
+    "main.css": "/DiceGame/static/css/main.10088fa4.css",
+    "main.js": "/DiceGame/static/js/main.f371ac76.js",
+    "index.html": "/DiceGame/index.html",
+    "main.10088fa4.css.map": "/DiceGame/static/css/main.10088fa4.css.map",
+    "main.f371ac76.js.map": "/DiceGame/static/js/main.f371ac76.js.map"
   },
   "entrypoints": [
     "static/css/main.10088fa4.css",
