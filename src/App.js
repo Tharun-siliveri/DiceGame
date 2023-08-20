@@ -5,10 +5,11 @@ import Confetti from "react-confetti"
 
 export default function App() {
 
-    const [dice, setDice] = React.useState(allNewDice())
-    const [tenzies, setTenzies] = React.useState(false)
+    const [dice, setDice] = React.useState(allNewDice())//1.
+    const [tenzies, setTenzies] = React.useState(false)//4.
     
-    React.useEffect(() => {
+    React.useEffect(() => {//5.// to check if all dice are held and have the same value 
+        //and to set tenzies to true
         const allHeld = dice.every(die => die.isHeld)
         const firstValue = dice[0].value
         const allSameValue = dice.every(die => die.value === firstValue)
@@ -17,7 +18,7 @@ export default function App() {
         }
     }, [dice])
 
-    function generateNewDie() {
+    function generateNewDie() {//3.
         return {
             value: Math.ceil(Math.random() * 6),
             isHeld: false,
@@ -25,7 +26,7 @@ export default function App() {
         }
     }
     
-    function allNewDice() {
+    function allNewDice() {//2.
         const newDice = []
         for (let i = 0; i < 10; i++) {
             newDice.push(generateNewDie())
@@ -34,13 +35,13 @@ export default function App() {
     }
     
     function rollDice() {
-        if(!tenzies) {
+        if(!tenzies) { //if not tenzies, roll dice
             setDice(oldDice => oldDice.map(die => {
                 return die.isHeld ? 
                     die :
                     generateNewDie()
             }))
-        } else {
+        } else { //if tenzies, reset game
             setTenzies(false)
             setDice(allNewDice())
         }
